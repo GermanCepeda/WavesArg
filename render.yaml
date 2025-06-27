@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: WavesArg
-    env: dotnet
-    plan: free
-    buildCommand: dotnet build
-    startCommand: dotnet WaveArg.dll
-    rootDir: WaveArg
