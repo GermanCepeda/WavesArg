@@ -5,10 +5,10 @@ WORKDIR /src
 # Copiamos todo el repo
 COPY . .
 
-# Restauramos y publicamos desde la subcarpeta
+# Restauramos y publicamos desde la carpeta WaveArg
 WORKDIR /src/WaveArg
-RUN dotnet restore "WaveArg/WaveArg.csproj"
-RUN dotnet publish "WaveArg/WaveArg.csproj" -c Release -o /app/publish
+RUN dotnet restore "WaveArg.csproj"
+RUN dotnet publish "WaveArg.csproj" -c Release -o /app/publish
 
 # Etapa 2: runtime
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
